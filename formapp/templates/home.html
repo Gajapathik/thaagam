@@ -1008,25 +1008,21 @@
   </script>
 
   <script>
-   
-
-
     $(document).ready(function(){
-      $(window).scroll(function(){
-        var scrollheight=$(this).scrollTop();
-        if(scrollheight>=$(window).height()){
-          $('.user_name').css('color','black')
-        }
-        else{
-          $('.user_name').css('color','')
-        }
-
-
-      })
-    })
-    
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll >= 200) {
+                $('.user_name').css('color', 'black');
+            } else {
+                $('.user_name').css('color', 'white');
+            }
+        });
+    });
     
   </script>
+
+
+
 
 {% else %}
         <p>User not logged in.</p>
